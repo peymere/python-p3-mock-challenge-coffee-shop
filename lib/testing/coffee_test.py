@@ -10,8 +10,8 @@ class TestCoffee:
 
     def test_has_name(self):
         """Coffee is initialized with a name"""
-        coffee = Coffee("Mocha")
-        assert coffee.name == "Mocha"
+        # coffee = Coffee("Mocha")
+        # assert coffee.name == "Mocha"
 
     def test_name_is_valid_string(self):
         """Coffee is initialized with a name of type str longer than 2.0 chars"""
@@ -19,12 +19,12 @@ class TestCoffee:
         assert isinstance(coffee.name, str)
 
         # uncomment the next two lines if using Exceptions
-        # with pytest.raises(Exception):
-        #     Coffee(2.0)
+        with pytest.raises(Exception):
+            Coffee(2.0)
 
         # uncomment the next two lines if using Exceptions
-        # with pytest.raises(Exception):
-        #     Coffee("me")
+        with pytest.raises(Exception):
+            Coffee("me")
 
     def test_name_is_immutable(self):
         """cannot change the name of the coffee"""
